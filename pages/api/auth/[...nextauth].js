@@ -5,6 +5,7 @@ const options = {
   site: process.env.SITE || 'http://localhost:3000',
 
   // Configure one or more authentication providers
+/*
   providers: [
     Providers.Google({
       clientId: process.env.GOOGLE_ID,
@@ -26,6 +27,13 @@ const options = {
       server: process.env.EMAIL_SERVER,
       from: process.env.EMAIL_FROM,
     }),
+  ],
+*/
+  providers: [
+    Providers.Strava({
+      clientId: process.env.STRAVA_CLIENT_ID,
+      clientSecret: process.env.STRAVA_CLIENT_SECRET,
+    })
   ],
 
   // A database is optional, but required to persist accounts in a database
